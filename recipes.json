@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "Korean Sticky Tofu Bowl",
+    "image": "images/tofu bowl.jpg",
+    "time": "30 min",
+    "servings": 2,
+    "category": "Dinner",
+    "cuisine": "Asian",
+    "difficulty": "Medium",
+    "date": "2026-02-06"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Fajita Enchiladas",
+    "image": "images/enchilada.jpg",
+    "time": "45 min",
+    "servings": 4,
+    "category": "Dinner",
+    "cuisine": "Mexican",
+    "difficulty": "Medium",
+    "date": "2025-06-17"
+  },
+  {
+    "id": 3,
+    "title": "Miso Salmon Rice Bowl",
+    "image": "images/miso salmon.jpg",
+    "time": "60 min",
+    "servings": 2,
+    "category": "Dinner",
+    "cuisine": "Asian",
+    "difficulty": "Medium",
+    "date": "2025-06-17"
+  },
+  {
+    "id": 4,
+    "title": "Avocado Caesar Salad with Crispy Chickpeas",
+    "image": "images/chickpea caesar.jpg",
+    "time": "20 min",
+    "servings": 2,
+    "category": "Lunch",
+    "cuisine": "American",
+    "difficulty": "Medium",
+    "date": "2025-06-11"
+  },
+  {
+    "id": 5,
+    "title": "Sweetgreen Dupe",
+    "image": "images/sweetgreen dupe.jpg",
+    "time": "50 min",
+    "servings": 2,
+    "category": "Lunch",
+    "cuisine": "American",
+    "difficulty": "Hard",
+    "date": "2025-05-14"
+  },
+  {
+    "id": 6,
+    "title": "Charcuterie Board",
+    "image": "images/charcuterie.jpg",
+    "time": "25 min",
+    "servings": 6,
+    "category": "Snacks",
+    "cuisine": "American",
+    "difficulty": "Easy",
+    "date": "2025-05-25"
+  },
+  {
+    "id": 7,
+    "title": "Chicken Katsu",
+    "image": "images/chicken katsu.jpg",
+    "time": "50 min",
+    "servings": 3,
+    "category": "Dinner",
+    "cuisine": "Asian",
+    "difficulty": "Hard",
+    "date": "2025-03-22"
+  },
+  {
+    "id": 8,
+    "title": "Roasted Tomato Soup and Garlic Bread Grilled Cheese",
+    "image": "images/tomato soup.jpg",
+    "time": "60 min",
+    "servings": 4,
+    "category": "Lunch",
+    "cuisine": "American",
+    "difficulty": "Medium",
+    "date": "2025-03-19"
+  },
+  {
+    "id": 9,
+    "title": "Creamy Lemon Orzo with Parmesan Salmon Bites",
+    "image": "images/orzo and salmon.jpg",
+    "time": "60 min",
+    "servings": 2,
+    "category": "Dinner",
+    "cuisine": "Italian",
+    "difficulty": "Hard",
+    "date": "2025-03-05"
+  },
+  {
+    "id": 10,
+    "title": "Chicken Tacos with Avocado Cream and Pineapple Salsa",
+    "image": "images/chicken tacos.jpg",
+    "time": "50 min",
+    "servings": 2,
+    "category": "Lunch",
+    "cuisine": "Mexican",
+    "difficulty": "Medium",
+    "date": "2025-03-03"
+  },
+  {
+    "id": 11,
+    "title": "Avocado and Egg Toast",
+    "image": "images/avocado toast.jpg",
+    "time": "20 min",
+    "servings": 2,
+    "category": "Breakfast",
+    "cuisine": "American",
+    "difficulty": "Easy",
+    "date": "2024-03-06"
+  },
+  {
+    "id": 12,
+    "title": "Protein Pancakes",
+    "image": "images/protein pancakes.jpg",
+    "time": "30 min",
+    "servings": 2,
+    "category": "Breakfast",
+    "cuisine": "American",
+    "difficulty": "Medium",
+    "date": "2024-01-23"
+  }
+]

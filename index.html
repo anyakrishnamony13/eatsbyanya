@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eats by anya ✿</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    .vinyl-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 0 18px;
+    }
+    .vinyl {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: conic-gradient(
+        var(--pink) 0deg, #e8c8e0 30deg, var(--blue) 60deg, #a8c8e0 90deg,
+        var(--pink) 120deg, #e8c8e0 150deg, var(--blue) 180deg, #a8c8e0 210deg,
+        var(--pink) 240deg, #e8c8e0 270deg, var(--blue) 300deg, #a8c8e0 330deg,
+        var(--pink) 360deg
+      );
+      box-shadow: 0 8px 32px rgba(33,60,81,0.15);
+      position: relative;
+      cursor: pointer;
+      animation: spin-vinyl 4s linear infinite;
+      animation-play-state: paused;
+    }
+    .vinyl.playing { animation-play-state: running; }
+    .vinyl::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 26px; height: 26px;
+      background: var(--navy);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(33,60,81,0.3);
+    }
+    @keyframes spin-vinyl {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .vinyl-label {
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: rgba(238,238,238,0.5);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .vinyl-song {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      color: var(--pink);
+      font-style: italic;
+      text-align: center;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ───── SIDEBAR ───── -->
+<aside class="sidebar">
+  <div class="logo-wrap">
+    <div class="logo-icon">🌸</div>
+    <div class="logo-name">eats by anya</div>
+    <div class="logo-tagline">recipes & food stories</div>
+  </div>
+
+  <nav>
+    <div class="nav-section-label">Explore</div>
+    <a class="nav-link active" href="index.html">
+      <span class="nav-emoji">🏠</span> Home
+    </a>
+    <a class="nav-link" href="recipes.html">
+      <span class="nav-emoji">🍽️</span> Recipes
+    </a>
+    <a class="nav-link" href="about.html">
+      <span class="nav-emoji">✨</span> About
+    </a>
+    <a class="nav-link" href="blog.html">
+      <span class="nav-emoji">📝</span> Blog
+    </a>
+    <a class="nav-link" href="suggestions.html">
+      <span class="nav-emoji">🍳</span> Suggestions
+    </a>
+
+  </nav>
+
+  
+
+  <!-- VINYL PLAYER -->
+  <div class="vinyl-wrap">
+    <div class="vinyl" id="vinyl" onclick="toggleMusic()"></div>
+    <div class="vinyl-label" id="vinyl-label">click to play</div>
+    <div class="vinyl-song">More Than a Woman<br>Bee Gees</div>
+  </div>
+  <audio id="kitchen-audio" loop>
+    <source src="More%20Than%20A%20Woman.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="sidebar-socials">
+    <a class="social-pill" href="https://www.instagram.com/eatsbyanya/"><svg role="img" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+    <a class="social-pill" href="https://www.tiktok.com/@eatsbyanya"><svg role="img" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:block;"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+  </div>
+
+</aside>
+
+<!-- ───── MAIN ───── -->
+<main class="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">🌸 welcome to my kitchen</div>
+    <h1>Made with love,<br><em>shared with you</em></h1>
+    <p>Hi! I'm Anya — food creator behind @eatsbyanya. Here you'll find all my favorite recipes, from quick weeknight dinners to planned out four-course meals.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="recipes.html">Browse Recipes ✿</a>
+      <a class="btn-outline" href="about.html">About Me</a>
+    </div>
+  </section>
+
+  <div class="content">
+
+    <!-- RECENT RECIPES -->
+    <div class="section-header">
+      <div class="section-title">Recent <span>Recipes</span></div>
+      <a class="see-all" href="recipes.html">See All →</a>
+    </div>
+    <div class="cards-grid" id="recent-cards">
+      <!-- injected by JS from recipes.json -->
+    </div>
+
+    <!-- FEATURED BANNER -->
+    <div class="featured-banner">
+      <div class="featured-text">
+        <div class="eyebrow">✦ latest post</div>
+        <h2>My Top 5 Cooking Tips</h2>
+        <p>From building flavor to nailing your mise en place, these are the five things that completely changed how I cook — and I wish someone had told me sooner.</p>
+        <br>
+        <a class="btn-primary" href="#" style="display:inline-block; margin-top: 4px;">Read the Post ✿</a>
+      </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="section-header">
+      <div class="section-title">Browse by <span>Category</span></div>
+    </div>
+    <div class="categories-grid" id="categories-grid">
+      <!-- injected by JS from recipes.json -->
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    made with <span>♡</span> by anya · @eatsbyanya
+  </footer>
+</main>
+
+<script>
+  // ── VINYL ──
+  const audio = document.getElementById('kitchen-audio');
+  const vinyl = document.getElementById('vinyl');
+  const label = document.getElementById('vinyl-label');
+
+  window.addEventListener('click', function startOnFirstInteraction() {
+    audio.play();
+    vinyl.classList.add('playing');
+    label.textContent = 'now playing ♪';
+    window.removeEventListener('click', startOnFirstInteraction);
+  }, { once: true });
+
+  function toggleMusic() {
+    if (audio.paused) {
+      audio.play();
+      vinyl.classList.add('playing');
+      label.textContent = 'now playing ♪';
+    } else {
+      audio.pause();
+      vinyl.classList.remove('playing');
+      label.textContent = 'click to play';
+    }
+  }
+
+  // ── CARD COLOR based on category ──
+  const categoryColors = {
+    Dinner:    '1',
+    Baking:    '2',
+    Breakfast: '3',
+    Lunch:     '1',
+    Drinks:    '2',
+    Snacks:    '3'
+  };
+
+  const categoryEmojis = {
+    Breakfast: '☀️',
+    Lunch:     '🥗',
+    Dinner:    '🌙',
+    Baking:    '🎂',
+    Drinks:    '☕',
+    Snacks:    '🌿'
+  };
+
+  // ── LOAD RECIPES ──
+  fetch('recipes.json')
+    .then(r => r.json())
+    .then(recipes => {
+      // sort newest first
+      recipes.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      renderRecentCards(recipes);
+      renderCategories(recipes);
+    });
+
+  function formatDate(dateStr) {
+    const d = new Date(dateStr + 'T00:00:00');
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  function buildCard(recipe) {
+    const color = categoryColors[recipe.category] || '1';
+    const difficultyColor = recipe.difficulty === 'Easy' ? 'pink' : recipe.difficulty === 'Medium' ? 'blue' : '';
+    const imgContent = recipe.image
+      ? `<img src="${recipe.image}" alt="${recipe.title}" style="width:100%;height:100%;object-fit:cover;display:block;" />`
+      : `<span style="font-size:3.8rem;">${recipe.emoji || '🍽️'}</span>`;
+    return `
+      <a class="card" href="#">
+        <div class="card-img card-img-${color}" style="${recipe.image ? 'padding:0;' : ''}">
+          ${imgContent}
+          <div class="card-badge">⏱ ${recipe.time}</div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag ${difficultyColor}">${recipe.category}</span>
+            <span class="tag">${recipe.difficulty}</span>
+            <span class="tag">${recipe.cuisine}</span>
+          </div>
+          <h3>${recipe.title}</h3>
+          <div class="card-meta">
+            <span>🍽 ${recipe.servings} serving${recipe.servings !== 1 ? 's' : ''}</span>
+            <span>📅 ${formatDate(recipe.date)}</span>
+          </div>
+        </div>
+      </a>`;
+  }
+
+  function renderRecentCards(recipes) {
+    const grid = document.getElementById('recent-cards');
+    grid.innerHTML = recipes.slice(0, 3).map(buildCard).join('');
+  }
+
+  function renderCategories(recipes) {
+    const grid = document.getElementById('categories-grid');
+    const categories = ['Breakfast', 'Lunch', 'Dinner', 'Baking', 'Drinks', 'Snacks'];
+    grid.innerHTML = categories.map(cat => {
+      const count = recipes.filter(r => r.category === cat).length;
+      return `
+        <a class="cat-card" href="recipes.html?category=${cat}">
+          <div class="cat-emoji">${categoryEmojis[cat]}</div>
+          <div class="cat-label">${cat}</div>
+          <div class="cat-count">${count} recipe${count !== 1 ? 's' : ''}</div>
+        </a>`;
+    }).join('');
+  }
+</script>
+
+</body>
+</html>

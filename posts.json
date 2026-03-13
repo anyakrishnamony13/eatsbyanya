@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "My Top 5 Cooking Tips",
+      "excerpt": "From building flavor to nailing your mise en place, these are the five things that completely changed how I cook — and I wish someone had told me sooner.",
+      "emoji": "🍳",
+      "date": "2026-03-10",
+      "readTime": "4 min read",
+      "tag": "Tips & Tricks",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "What I Eat in a Week as a College Student",
+      "excerpt": "Real meals, real budget, real Boston apartment kitchen. Here's a honest look at what actually ends up on my plate during a busy week.",
+      "emoji": "📓",
+      "date": "2026-03-04",
+      "readTime": "6 min read",
+      "tag": "Life",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "The Pantry Staples I Always Have on Hand",
+      "excerpt": "If you stock these 15 ingredients, you can make almost anything. My go-to list for a kitchen that's always ready.",
+      "emoji": "🌿",
+      "date": "2026-02-24",
+      "readTime": "5 min read",
+      "tag": "Kitchen Essentials",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Why I Started @eatsbyanya",
+      "excerpt": "The honest story of how a high school hobby turned into something I actually care about — and why I think everyone should cook more.",
+      "emoji": "✨",
+      "date": "2026-02-14",
+      "readTime": "3 min read",
+      "tag": "Personal",
+      "featured": false
+    }
+    
+  ]
