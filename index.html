@@ -66,13 +66,11 @@
 </head>
 <body>
 
-<!-- HAMBURGER BUTTON -->
 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
   <span></span><span></span><span></span>
 </button>
 <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
-<!-- ───── SIDEBAR ───── -->
 <aside class="sidebar">
   <div class="logo-wrap">
     <div class="logo-icon">🌸</div>
@@ -99,7 +97,6 @@
     </a>
   </nav>
 
-  <!-- VINYL PLAYER -->
   <div class="vinyl-wrap">
     <div class="vinyl" id="vinyl" onclick="toggleMusic()"></div>
     <div class="vinyl-label" id="vinyl-label">click to play</div>
@@ -115,10 +112,7 @@
   </div>
 </aside>
 
-<!-- ───── MAIN ───── -->
 <main class="main">
-
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-eyebrow">🌸 welcome to my kitchen</div>
     <h1>Made with love,<br><em>shared with you</em></h1>
@@ -131,14 +125,12 @@
 
   <div class="content">
 
-    <!-- RECENT RECIPES -->
     <div class="section-header">
       <div class="section-title">Recent <span>Recipes</span></div>
       <a class="see-all" href="recipes.html">See All →</a>
     </div>
     <div class="cards-grid" id="recent-cards"></div>
 
-    <!-- FEATURED BANNER -->
     <div class="featured-banner">
       <div class="featured-text">
         <div class="eyebrow">✦ latest post</div>
@@ -149,7 +141,6 @@
       </div>
     </div>
 
-    <!-- CATEGORIES -->
     <div class="section-header">
       <div class="section-title">Browse by <span>Category</span></div>
     </div>
@@ -163,7 +154,6 @@
 </main>
 
 <script>
-  // ── VINYL ──
   const audio = document.getElementById('kitchen-audio');
   const vinyl = document.getElementById('vinyl');
   const label = document.getElementById('vinyl-label');
@@ -187,7 +177,6 @@
     }
   }
 
-  // ── MOBILE NAV ──
   const menuToggle = document.getElementById('menu-toggle');
   const sidebar = document.querySelector('.sidebar');
   const overlay = document.getElementById('sidebar-overlay');
@@ -213,7 +202,6 @@
     });
   });
 
-  // ── CARD COLOR based on category ──
   const categoryColors = { Dinner:'1', Baking:'2', Breakfast:'3', Lunch:'1', Drinks:'2', Snacks:'3' };
   const categoryEmojis = { Breakfast:'☀️', Lunch:'🥗', Dinner:'🌙', Baking:'🎂', Drinks:'☕', Snacks:'🌿' };
 

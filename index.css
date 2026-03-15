@@ -1,4 +1,3 @@
-/* ── GOOGLE FONTS imported via index.html <link> ── */
 
 :root {
   --navy:      #213C51;
@@ -20,7 +19,7 @@ body {
   min-height: 100vh;
 }
 
-/* ── SIDEBAR ── */
+
 .sidebar {
   width: var(--sidebar-w);
   background: var(--navy);
@@ -35,7 +34,6 @@ body {
   overflow: hidden;
 }
 
-/* decorative blob behind logo */
 .sidebar::before {
   content: '';
   position: absolute;
@@ -151,7 +149,6 @@ nav {
 
 .social-pill:hover { background: var(--pink); color: var(--navy); }
 
-/* ── MAIN ── */
 .main {
   margin-left: var(--sidebar-w);
   flex: 1;
@@ -159,7 +156,6 @@ nav {
   flex-direction: column;
 }
 
-/* ── HERO ── */
 .hero {
   background: var(--white);
   padding: 72px 64px 60px;
@@ -168,7 +164,6 @@ nav {
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-/* decorative gradient circle */
 .hero::after {
   content: '';
   position: absolute;
@@ -222,7 +217,6 @@ nav {
   flex-wrap: wrap;
 }
 
-/* ── BUTTONS ── */
 .btn-primary {
   background: var(--navy);
   color: var(--cream);
@@ -253,7 +247,6 @@ nav {
 }
 .btn-outline:hover { background: var(--navy); color: var(--cream); transform: translateY(-2px); }
 
-/* ── CONTENT AREA ── */
 .content {
   padding: 52px 64px 80px;
 }
@@ -288,7 +281,6 @@ nav {
 }
 .see-all:hover { color: var(--pink); }
 
-/* ── RECIPE CARDS ── */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -379,7 +371,6 @@ nav {
   font-weight: 600;
 }
 
-/* ── FEATURED BANNER ── */
 .featured-banner {
   background: var(--navy);
   border-radius: 24px;
@@ -440,7 +431,6 @@ nav {
   max-width: 340px;
 }
 
-/* ── CATEGORIES ── */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -476,7 +466,6 @@ nav {
 .cat-label { font-size: 0.82rem; font-weight: 700; color: var(--navy); transition: color 0.22s; }
 .cat-count { font-size: 0.68rem; color: #9ab; transition: color 0.22s; }
 
-/* ── FOOTER ── */
 .footer {
   background: var(--navy);
   color: rgba(238,238,238,0.5);

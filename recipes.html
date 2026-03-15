@@ -63,7 +63,6 @@
       line-height: 1.4;
     }
 
-    /* ── RECIPES PAGE ── */
     .recipes-hero {
       background: var(--white);
       padding: 52px 64px 40px;
@@ -125,13 +124,11 @@
 </head>
 <body>
 
-<!-- HAMBURGER BUTTON -->
 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
   <span></span><span></span><span></span>
 </button>
 <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
-<!-- ───── SIDEBAR ───── -->
 <aside class="sidebar">
   <div class="logo-wrap">
     <div class="logo-icon">🌸</div>
@@ -163,7 +160,6 @@
   </div>
 </aside>
 
-<!-- ───── MAIN ───── -->
 <main class="main">
   <div class="recipes-hero">
     <div class="hero-eyebrow">🍽️ the full collection</div>
@@ -213,7 +209,6 @@
 </main>
 
 <script>
-  // ── VINYL ──
   const audio = document.getElementById('kitchen-audio');
   const vinyl = document.getElementById('vinyl');
   const label = document.getElementById('vinyl-label');
@@ -233,7 +228,6 @@
     }
   }
 
-  // ── MOBILE NAV ──
   const menuToggle = document.getElementById('menu-toggle');
   const sidebar = document.querySelector('.sidebar');
   const overlay = document.getElementById('sidebar-overlay');
@@ -253,7 +247,6 @@
     });
   });
 
-  // ── FILTERS ──
   const activeFilters = { category: 'all', cuisine: 'all', difficulty: 'all' };
   let allRecipes = [];
   const categoryColors = { Dinner:'1', Baking:'2', Breakfast:'3', Lunch:'1', Drinks:'2', Snacks:'3' };
